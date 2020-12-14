@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<meta charset="utf-8">
+	<style>
+		
+		div.c {
+
+			text-align: center;
+
+		}
+		div.b {
+
+			text-align: center;
+		}
+		div.a {
+
+			text-align: center;
+		}
+		table,td,th{
+			border: solid 1px black;
+		}
+		.haha{
+			background-color: blue;
+			color: white;
+		}
+		#gridWrapper{
+			display: grid;
+			grid-template-columns : 	1fr 1fr 1fr;
+			grid-template-rows: 200px 100px;
+			grid-gap: 30px;
+			 
+		}
+		#gridWrapper > div {
+			background-color:  aqua;
+		}
+	</style>
+</head>
+<body>
+	<div class="a">
+	<h1>DATA</h1>
+	TABLE
+	<hr>
+
+	<table>
+		<div class="b">
+		<caption>TABLEの説明</caption>
+		<hr>
+		<thead>
+			<tr>
+				<th>順番</th>
+				<th>国</th>
+				<th>人口(x1000)</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="haha">11</td>
+				<td>メシキコ</td>
+				<td>126,191</td>
+			</tr>
+			<tr>
+				<td class="haha">12</td>
+				<td>イチオピロ</td>
+				<td>109,224</td>
+			</tr>
+			<tr>
+				<td class="haha">13</td>
+				<td>フィリピン</td>
+				<td>106,651</td>
+			</tr>
+			<tr>
+				<td class="haha">14</td>
+				<td>エジプト</td>
+				<td>98,424</td>
+			</tr>
+
+		</tbody>
+	</table>
+	<hr>
+
+	
+	★·.·´¯`·.·★ リスト ★·.·´¯`·.·★
+	<div id="gridWrapper">
+		<div class="c">
+		★·.·´¯`·.·★ 日本の名前ランキング ★·.·´¯`·.·★
+		
+	<ul>
+
+
+	
+		
+
+	    <div>1: サトウ</div>
+	    <div>2: スジキ</div>
+	    <div>3: タカハシ</div>
+	    <div>4: タナカ</div>
+	    <div>5: イトウ</div>
+	</ul>
+	</div>
+
+
+</body>
+</html>
