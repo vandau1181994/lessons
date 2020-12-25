@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery:text</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	
+
+	<h1>'明日'   正しい読み方、選んでください</h1>
+	<hr>
+		<button id="A">あした</button>
+	
+	<button id="B">あしいた</button>
+	
+	
+	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script>
+  		$(function(){
+  			$('#A').on('click',function(){
+  				$('h1').text('正解');
+  				 			});
+  		
+  			$('#B').on('click',function(){
+
+
+  			$('h1').text('違い');
+  		});
+  			});
+ 
+  	</script>
+
+</body>
+</html>
