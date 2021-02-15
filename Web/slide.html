@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>slide show</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>slide show : フライドショー</h1>
+	画像をくりっくしたら、次の画像を表示する
+
+	<hr>
+
+	<img src="gazo/1.jpg">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script >
+		$(function(){
+			let num =1;
+			$("img").on("click",function(){
+				if( num == 1){
+
+
+				$("img").attr("src","gazo/logo.jpg" );
+				num = 2;
+			} else {
+				$("img").attr("src","gazo/1.jpg");
+				num = 1;
+			}
+			});
+		})
+		// dấu " / " trong link ảnh,thì chỉ cần khi ngắn gọn địa điểm của ảnh, còn dấu "\" phai ghi dầy đủ
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>a</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<img src="gazo/1.jpg">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script >
+		$(function(){
+			const gazofiles = [
+			'gazo/1.jpg',
+			'gazo/2.jpg',
+			'gazo/logo.jpg',
+			'gazo/NARUTO.jpg',
+			'gazo/3.jpg'
+
+			]
+			let num = 0;
+			$("img").on("click",function(){
+				num++
+				if ( num >= gazofiles.length){
+					num = 0;
+				}
+				$("img").attr("src",gazofiles[num]);
+			})
+		})
+		// dấu " / " trong link ảnh,thì chỉ cần khi ngắn gọn địa điểm của ảnh, còn dấu "\" phai ghi dầy đủ
+	</script>
+</body>
+</html>

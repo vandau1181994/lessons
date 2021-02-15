@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Naruto</title>
+	<meta charset="utf-8">
+	
+	
+	<style >
+		p{
+			color: red;
+
+		}
+		h1{
+			color: chocolate;
+		}
+		h1{
+			font-family: cursive;
+		}
+		h2{
+			font-family: Helvetica;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Naruto</h1>
+
+
+	<h2>Boruto</h2>
+
+
+	<h3>Sasuke</h3>
+	<hr>
+
+	<h2>質問</h2>
+	<p id="mondai">ナルトはどこに住んでいますか？</p>
+	<ol>
+		<li id="naruto">ナルト</li>
+		<li id="sasuke">サスケ</li>
+		<li id="kakasi">カカシ</li>
+		<li id="sakura">サクラ</li>
+	</ol>
+	<ul>
+		<li id="naruto2">ナルト</li>
+		<li id="sasuke2">サスケ</li>
+		<li id="kakasi2">カカシ</li>
+		<li id="sakura2">サクラ</li>
+	</ul>
+  <p>
+    Narutoは週刊少年ジャンプに連載されていた忍者の物語。しかしナルトがいつ中忍試験に合格したか、わからない。。
+  </p>
+  
+  <p>
+    また、いつの間にか子どもがいて、やっぱり忍者になっていく？<br>
+    その物語は読まなかったので、私は知りません。。
+  </p>
+  <form>
+  ID: <input type="text" name="id"><br>
+　パスワード: <input type="password" name="password"><br>
+　日付: <input type="date" name="date"><br>
+<button>クリックしてください</button>
+<input type="submit" value="OK">
+
+  </form>
+  <img src="gazo/NARUTO.jpg" width=300>
+  <img src="gazo/naruto1.jpg" width=300>
+  <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  	$(function(){
+  		alert("HELLO");
+  		$("h1").on("click",function(){
+  			$("h1").css("color","blue");
+  		});
+  		$("h2").on("click",function(){
+  			$("h2").css("color","red");
+  		});
+  		$("ol").on("click",function(){
+  			$("ol").css("color","green");
+  		});
+  		$("h3").on("click",function(){
+  			$("h3").css("color","orange");
+  		});
+  		$("#naruto").on("click",function(){
+  			$("#naruto").css("color","pink");
+  		});
+  		$("#sasuke").on("click",function(){
+  			$("#sasuke").css("color","red");
+
+  		});
+  		$("#kakasi").on("click",function(){
+  			$("#kakasi").css("color","lime");
+  		});
+  		$("#sakura").on("click",function(){
+  			$("#sakura").css("color","violet");
+  		});
+  		$("#naruto2").on("click",function(){
+  			$("#naruto2").text("鳥門");
+  		});
+  		$("#sasuke2").on("click", function(){
+        $("#sasuke2").text("佐助");
+   		});
+  		$("#kakasi2").on("click", function(){
+        $("#kakasi2").text("案山子");
+   		});
+  		$("#sakura2").on("click", function(){
+        $("#sakura2").text("桜");
+   		});  
+   		$("#mondai").on("click",function(){
+   			$("#mondai").text("KONOHA");
+   		}); 		   		
+
+  	
+  	})
+  </script>
+
+</body>
+</html>

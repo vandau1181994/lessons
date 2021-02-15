@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HELLO</title>
+	<meta charset="utf-8">
+	
+	<img src="gazo/1.jpg" width="400" height="400">
+	<h2>Hello</h2>
+	
+	<style>
+		.blue{
+			color : blue;
+		}
+		.red{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>SONGOKU</h1>
+
+		<li>songoku</li>
+		<li>PICOLO</li>
+	<hr>
+
+	<ul>
+		<li>SONGOKU</li>
+		<li>picolo</li>
+	</ul>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   	<script>
+   		$(function(){
+   			const gazofiles = [
+			'gazo/1.jpg',
+			'gazo/2.jpg ',
+			'gazo/NARUTO.jpg',
+			'gazo/3.jpg'
+
+			]
+			const gazo = [
+			'Hello',
+			'Hi',
+			'Good afternoon',	
+			'Good night',
+			]
+
+			let num = 0;
+			$("img").on("click",function(){
+				num++
+				if ( num >= gazofiles.length){
+					num = 0;
+				}
+				$("img").attr("src",gazofiles[num]);
+				$("h2").text(gazo[num])
+			})
+		
+   			
+   		
+   			$("h1").on("click",function(){
+   				$(this).addClass("blue");
+   			});
+   		//	$("img").on("click",function(){
+   		//		$(this).attr("src","gazo/2.jpg");
+   		//	});
+   			let SONGOKU = 1;
+   			const anime = ["SONGOKU", "songoku","PICOLO","picolo"];
+   			$("li").on("click",function(){
+   				if ( SONGOKU == 1){
+   					$(this).text("VEGETA").addClass("blue");
+   					SONGOKU = 0;
+   				}else{
+   					const num = $(this).index();
+   					$(this).text(anime[num]).removeClass("blue");
+   					SONGOKU = 1;
+   				}
+   				
+   			});
+   			$("body").on("mousemove",function(e){
+   				$("h1").text(e.clientX);
+   			});
+
+   		})
+   	</script>
+
+
+</body>
+</html>

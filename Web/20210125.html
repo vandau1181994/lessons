@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>クイズ</title>
+	<meta charset="utf-8">
+
+</head>
+<body>
+	<h1>クイズ with jQuery</h1>
+	問題文クリックすると、正解が表示されます。
+	<hr>
+
+	<p>
+		<ul>
+		<li id="a">1 + 1 - 1 = ??</li>
+		<li id="b">1 + 2 - 1 = ??</li>
+		<li id="c">1 + 3 - 2 = ??</li>
+	</ul>
+
+	</p>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$("#a").on("click",function(){
+				$("#a").text("答えは：１");
+			});
+			$("#b").on("click",function(){
+				$("#b").text("答えは：2");
+			});
+			$("#c").on("click",function(){
+				$("#c").text("答えは：2");
+			});
+			$("h1").on("click",function(){
+				$("h1").hide("slow");
+			});
+		})
+		
+	</script>
+
+
+</body>
+</html>

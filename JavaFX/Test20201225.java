@@ -8,7 +8,7 @@ import javafx.animation.Animation;
    import javafx.scene.paint.Color;
    import javafx.scene.shape.Rectangle;
    
-   public class Test extends Application {
+   public class Test20201225 extends Application {
      // main()
      public static void main( String[] args ) {
        launch( args );
@@ -21,16 +21,18 @@ import javafx.animation.Animation;
        Scene scene = new Scene( v, 400, 300 );
        stage.setScene( scene );
        stage.show();
+       scene.setOnMouseClicked(e -> v.changeColor() );
        
      }
    }
 
    
    class View extends Group {
+    Rectangle rect;
      // constructor
      public View() {
        // shape, color
-       Rectangle rect = new Rectangle( 0, 0, 50, 40 );
+        rect = new Rectangle( 0, 0, 50, 40 );
        rect.setFill( Color.CYAN );
        
        // animation, setcyclecount, setautoreverse
@@ -45,6 +47,9 @@ import javafx.animation.Animation;
        // play, add
        animation.play();
        getChildren().add( rect );
+     }
+     public void changeColor(){
+      rect.setFill(Color.RED);
      }
    }
    
