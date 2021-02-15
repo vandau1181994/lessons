@@ -6,6 +6,18 @@
 	<img src="C:\Users\200263\Desktop\lessons\Web\exam\logo.jpg" >
 </head>
 <body>
+	<h2> 私のLOGO </h2>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$("img").on("click",function(){
+				$(this).hide("img")
+			})
+			$("h2").on("click",function(){
+				$(this).hide("h2")
+			})
+		})
+	</script>
 
 </body>
 </html>

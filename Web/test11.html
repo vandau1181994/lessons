@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<meta charset="utf-8">
+	<style>
+		.blue{
+			color: blue;
+		}
+		.red{
+			color: red;
+		}
+		.large{
+			font-size: 50pt;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>ぶり</li>				
+		<li>はまち</li>
+		<li>たい</li>
+		<li class="red">まぐろ</li>
+		<li>こはだ</li>
+	</ul>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$("li").on("click",function(){
+				$(this).addClass("large")
+			})
+
+		})
+	</script>
+
+
+</body>
+</html>

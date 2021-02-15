@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test11</title>
+	<meta charset="utf-8">
+	<style >
+		.red{
+			color: red;
+		}
+		.blue{
+			color: blue;
+		}
+		.green{
+			color: green;
+		}
+	</style>
+
+</head>
+<body>
+	<h1>test11</h1>
+
+	<hr>
+
+	<button id="a">BTN1</button>
+	<button id="b">BTN2</button>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$("#a").on("click",function(){
+				$("h1").addClass("red")
+			})
+			$("#b").on("click",function(){
+				$("h1").addClass("blue")
+			})
+		})
+
+	</script>
+
+</body>
+</html>

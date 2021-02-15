@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test10</title>
+	<meta charset="utf-8">
+	<img src="img/2.jpg" width="300" height="300">
+	<h2>HELLO</h2>
+</head>
+<body>
+	<button id="mae">前</button>
+	<button id="usiro">後ろ</button>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			const gazofiles = [
+			'img/2.jpg',
+			'img/logo.jpg',
+			'img/200263.jpg',
+			'img/9.jpg',
+			
+			]
+			const gazo = [
+			'Hi',
+			'Songoku',
+			'valentine',
+			'logo',
+			]
+
+			let num = 0;
+			$("#mae").on("click",function(){
+				num++
+				if ( num >= gazofiles.length){
+					num = 0;
+				}
+				$("img").attr("src",gazofiles[num]);
+				$("h2").text(gazo[num])
+
+
+				
+			})	
+			$("#usiro").on("click",function(){
+				num--
+				if ( num >= gazofiles.length){
+					num = 0;
+				}
+				$("img").attr("src",gazofiles[num]);
+				$("h2").text(gazo[num])
+
+			})
+
+
+		})
+	</script>
+
+</body>
+</html>
