@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>faf</title>
+	<meta charset="utf-8">
+	<img id="a"src="gazo/1.jpg" width="200">
+	<img id="b"src="gazo/3.jpg" width="200">
+</head>
+<body>
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		 <script>
+		 	$(function(){
+		 		const gazo = [
+		 		'gazo/3.jpg',
+		 		'gazo/1.jpg',]
+		 		const gazoo = [
+		 		'gazo/3.jpg',
+		 		'gazo/1.jpg']
+		 		let num = 0
+		 		$("img").on("click",function(){
+		 			$("#b").attr("src",gazo[num])
+		 			$("#a").attr("src",gazoo[num])
+		 		})
+		 				 		$("img").on("click",function(){
+		 			$("#b").attr("src",gazo[num])
+		 			$("#a").attr("src",gazoo[num])
+		 		})
+
+		 	})
+		 </script>
+
+</body>
+</html>

@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test5</title>
-	<meta charset="utf-8">
-	<img src="img\2.jpg" width="400" height="600">
-	<img src="img\9.jpg" width="400">
+	<title>TEST5</title>
 </head>
 <body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script>
-		$(function(){
-			const gazofiles = [
-			'img/9.jpg',
-			'img/2.jpg',
-			]
-			let num = 0;
-			$("img").on("click",function(){
-				num++
-				if ( num >= gazofiles.length){
-					num = 0;
-				}
-				$("img").attr("src",gazofiles[num]);
-			})
+	<img id="aa" src="img/2.jpg" width=200>
+	<img id="bb" src="img/logo.jpg" width=200>
 
-		})
-	</script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+        const gazo = [
+          `img/2.jpg`,
+          `img/logo.jpg`
+        ]
+        const imgs = [
+         `img/logo.jpg`,
+          `img/2.jpg`
+        ]
+        let num = 0
 
+        $("img").on("click", function(){
+          num++
+           if ( num >= gazo.length ) {
+            num = 0
+          }
+          $("#aa").attr("src", gazo[ num ]);
+          $("#bb").attr("src", imgs[ num ]);
+        })
+      })
+    </script>
 </body>
 </html>
