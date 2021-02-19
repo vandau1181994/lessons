@@ -9,7 +9,7 @@ import javafx.application.Application;
    import javafx.scene.input.KeyEvent;
    import javafx.event.EventHandler;
    
-   public class BarTestFX extends Application{
+   public class Bar extends Application{
     private BreakoutThread breakoutthread;
     public static void main(String[] args){
       launch( args );
@@ -19,7 +19,7 @@ import javafx.application.Application;
       //key
       Key key = new Key(); //キーボード処理のクラス
       // title
-      stage.setTitle( "Breakout Game" );
+      stage.setTitle( "bartest only" );
       
       // pane, scene
       Pane pane = new Pane();
@@ -31,12 +31,6 @@ import javafx.application.Application;
           public void handle(KeyEvent e){
             key.keyPressed(e);
           }
-           });
-                scene.setOnKeyReleased(
-        new EventHandler<KeyEvent>(){
-          public void handle(KeyEvent e){
-            key.keyReleased(e);
-          }
         });
       
       // canvas, graphicscontext
@@ -45,7 +39,7 @@ import javafx.application.Application;
       pane.getChildren().add( canvas );
       
       // breakoutthread
-      breakoutthread = new BreakoutThread(gc, key );
+      breakoutthread = new BreakoutThread( gc );
       breakoutthread.start();
       
       // show
@@ -57,17 +51,12 @@ import javafx.application.Application;
   class BreakoutThread extends AnimationTimer {
     // data
     private GraphicsContext gc;
-    private Ball ball;
     private Bar bar;
     
     // method
-    public BreakoutThread( GraphicsContext gc, Key key ) {
+    public BreakoutThread( GraphicsContext gc ) {
       this.gc = gc;
-      this.ball = new Ball();
-
-      this.bar = new Bar(key);
-
-
+      this.bar = new Bar();
     }
     
     @Override
@@ -78,8 +67,6 @@ import javafx.application.Application;
       // 表示する
       ball.move();      // ballの新しい場所を決める
       ball.draw( gc );    // ballを描く
-      bar.draw(gc);
-      bar.move();
     }
   }
   
@@ -110,86 +97,24 @@ import javafx.application.Application;
     }
   }
 class Key{
-   private boolean right ;
-   private boolean left ;
-   public Key(){
-    this.right = false;
-    this.left = false;
-   }
-  
   public void keyPressed( KeyEvent e ){
-    switch( e.getCode()){
-     
-      case RIGHT:
-      System.out.println("RIGHT pressed.");
-      right = true;
-      break;
-       case LEFT:
-      System.out.println("LEFT pressed.");
-     // (boolean right を,true にする)
-      left = true;
-      break;
-      default:
-      break;
-    }
-   }
-  public void keyReleased( KeyEvent e){
-    switch(e.getCode()){
-
-      case RIGHT:
-      System.out.println("RIGHT released.");
-      right = false;
-      break;
-            case LEFT:
-      System.out.println("LEFT released.");
-      left = false;
-     // ( left を false にする )
-      
-
-     // ( right を　false にする)
-      break;
-      default:
-      break;
-
-    }
-   }
-    public boolean isRightPressed(){
-  return right;
+    System.out.println( e.getCode() + " pressed. ");
+  }
 }
-   public boolean isLeftPressed(){
-    return left;
-   }
-}
-
 class Bar{
   private int x;
   private int y;
   private int width;
   private int height;
-  private Key  key;
-  private int x_speed;
-
-
-
-  public Bar(Key key){
+  public Bar(){
     this.x = 100;
     this.y = 470;
     this.width = 100;
     this.height = 10;
-    this.key = key;
-    this.x_speed = 5;
     }
 public void draw( GraphicsContext gc){
-  gc.setFill(Color.RED);
+  gc.setFill(Color,RED);
   gc.fillRect(x,y,width,height);
-  }
-  public void move(){
-    if(key.isRightPressed() == true ){
-      x+=x_speed;
-      
-    }
-    if(key.isLeftPressed()== true){
-      x-=x_speed;
-    }
-  }
-} 
+  
+}
+}
